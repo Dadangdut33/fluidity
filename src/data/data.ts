@@ -8,22 +8,15 @@ import pic_7 from "./pictures/pic_7.jpg";
 import pic_8 from "./pictures/pic_8.png";
 
 export type dataElem = {
-	label: string,
-	value: string,
-}
+	label: string;
+	value: string;
+};
 
 export type linkGroup = {
 	title: string;
 	links: dataElem[];
-}
+};
 
-/*
-──────▄▌▐▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀​▀▀▀▀▀▀▌
-───▄▄██▌█ BEEP BEEP
-▄▄▄▌▐██▌█ GAY PORN DELIVERY
-███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄​▄▄▄▄▄▄▌
-▀(@)▀▀▀▀▀▀▀(@)(@)▀▀▀▀▀▀▀▀▀▀▀▀▀​▀▀▀▀(@)▀
-*/
 export const links: linkGroup[] = [
 	{
 		title: "Reddit",
@@ -44,7 +37,7 @@ export const links: linkGroup[] = [
 				label: "r/AnimalsBeingDerps",
 				value: "https://www.reddit.com/r/AnimalsBeingDerps/",
 			},
-		]
+		],
 	},
 	{
 		title: "3D Modelling",
@@ -69,7 +62,7 @@ export const links: linkGroup[] = [
 				label: "The other Blender tutorial",
 				value: "https://www.youtube.com/watch?v=bpvh-9H8S1g&list=PL8eKBkZzqDiU-qcoaghCz04sMitC1yx6k&index=1",
 			},
-		]
+		],
 	},
 	{
 		title: "Design",
@@ -94,7 +87,7 @@ export const links: linkGroup[] = [
 				label: "Affinity - YT",
 				value: "https://www.youtube.com/c/AffinityRevolution/playlists",
 			},
-		]
+		],
 	},
 	{
 		title: "Music",
@@ -119,7 +112,7 @@ export const links: linkGroup[] = [
 				label: "Utamaru - The Sanctified Mind Cover",
 				value: "https://www.youtube.com/watch?v=MHlJKLlS07U",
 			},
-		]
+		],
 	},
 	{
 		title: "Sauce",
@@ -148,9 +141,9 @@ export const links: linkGroup[] = [
 				label: "Even more real sauce ( ͡° ͜ʖ ͡°)",
 				value: "https://www.youtube.com/watch?v=VLhJOd_TFiI",
 			},
-		]
+		],
 	},
-]
+];
 
 export const images: dataElem[] = [
 	{ label: "pic_1", value: pic_1 },
@@ -183,39 +176,39 @@ export const searchEngines: dataElem[] = [
 ];
 
 export type FastForwards = {
-	[key: string]: string,
-}
+	[key: string]: string;
+};
 
 export type Search = {
-	engine: string,
-	fastForward: FastForwards,
-}
+	engine: string;
+	fastForward: FastForwards;
+};
 
 export const searchSettings: Search = {
 	engine: searchEngines[0].value,
 	fastForward: {
-		"deepl": "https://deepl.com/",
-		"maps": "https://google.de/maps/",
-		"reddit": "https://reddit.com/",
-		"github": "https://github.com/",
-		"gitlab": "https://gitlab.com/",
-		"youtube": "https://youtube.com/",
-	}
-}
+		deepl: "https://deepl.com/",
+		maps: "https://google.de/maps/",
+		reddit: "https://reddit.com/",
+		github: "https://github.com/",
+		gitlab: "https://gitlab.com/",
+		youtube: "https://youtube.com/",
+	},
+};
 
 export type colorsType = {
-	[key: string]: string
-	"--bg-color": string,
-	"--default-color": string,
-	"--accent-color": string,
-	"--accent-color2": string,
-}
+	[key: string]: string;
+	"--bg-color": string;
+	"--default-color": string;
+	"--accent-color": string;
+	"--accent-color2": string;
+};
 
 export type Theme = {
 	name: string;
 	colors: colorsType;
 	image: string;
-}
+};
 
 export const themes: Theme[] = [
 	{
@@ -255,8 +248,8 @@ export const themes: Theme[] = [
 			"--bg-color": "#0a1a25",
 			"--default-color": "#a6b7ab",
 			"--accent-color": "#94656b",
-			"--accent-color2": "#57182e"
-		}
+			"--accent-color2": "#57182e",
+		},
 	},
 	{
 		name: "Kitties",
@@ -265,8 +258,8 @@ export const themes: Theme[] = [
 			"--bg-color": "#495662",
 			"--default-color": "#d1f1fa",
 			"--accent-color": "#80aad4",
-			"--accent-color2": "#e8a9b7"
-		}
+			"--accent-color2": "#e8a9b7",
+		},
 	},
 	{
 		name: "pretty chill",
@@ -275,7 +268,7 @@ export const themes: Theme[] = [
 			"--bg-color": "#397d76",
 			"--default-color": "#f1daba",
 			"--accent-color": "#c5bdb5",
-			"--accent-color2": "#93a662"
-		}
-	}
-]
+			"--accent-color2": "#93a662",
+		},
+	},
+];
