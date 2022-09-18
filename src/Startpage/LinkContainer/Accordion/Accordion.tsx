@@ -93,7 +93,7 @@ const AccordionTitleWrapper = styled.button< { active: boolean }>`
             margin-top: -140px;
             border-radius: 37%;
             background-color: var(--bg-color);
-            animation: wave 12s infinite cubic-bezier(0.71, 0.33, 0.33, 0.68);
+            /* animation: wave 12s infinite cubic-bezier(0.71, 0.33, 0.33, 0.68); */
         }
         @keyframes wave {
             from { transform: rotate(0deg);}
