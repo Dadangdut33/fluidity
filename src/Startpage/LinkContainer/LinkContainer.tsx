@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useState , useEffect} from 'react';
 import styled from "@emotion/styled";
 import { AccordionContainer, AccordionGroup } from './Accordion/Accordion';
 import * as Settings from "../Settings/settingsHandler";
@@ -37,12 +37,20 @@ export const LinkContainer = () => {
 
     const middleMouseHandler = (event: MouseEvent, groupIndex: number) => {
         setActive(groupIndex)
+        localStorage.setItem("activeLinkGroup", groupIndex.toString());
         if (event.button === 1) {
             linkGroups[groupIndex].links.forEach((link, index) => {
                 window.open(link.value, "_blank")
             });
         }
     }
+
+    useEffect(() => {
+        const activeLinkGroup = localStorage.getItem("activeLinkGroup");
+        if (activeLinkGroup && linkGroups[parseInt(activeLinkGroup)]) {
+            setActive(parseInt(activeLinkGroup));
+        }
+    }, [])
 
     return <AccordionContainer>
         {linkGroups?.map((group, groupIndex) =>
